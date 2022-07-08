@@ -1,0 +1,7 @@
+node_modules/
+src/
+public/
+tsconfig.json
+tsconfig.path.json
+.prettierrc
+craco.config.json

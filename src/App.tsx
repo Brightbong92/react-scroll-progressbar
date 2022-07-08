@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from '@store/index';
+import { store } from './store/index';
 
-import HomePage from '@pages/home';
+import HomePage from './pages/home';
 
 function App() {
   return (
