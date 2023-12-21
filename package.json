@@ -1,11 +1,11 @@
 {
   "name": "@brightbong92/react-scroll-progressbar",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "browser": "./browser/specific/main.js",
-  "description": "react-scroll-progress-bar",
+  "description": "This is react-scroll-progress-bar component",
   "keywords": [
     "scroll",
     "react",
