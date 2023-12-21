@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { ProgressBar, ProgressWrapper } from './styled';
 
-const ScrollProgressBar = () => {
+interface ScrollProgressBarProps {
+  progressBarColor?: string;
+  height?: number;
+}
+
+/**
+ *
+ * @props progressBarColor: HEX(Hexadecimal)
+ * @props height: number
+ * @returns
+ */
+const ScrollProgressBar = ({ progressBarColor = '#000', height = 5 }: ScrollProgressBarProps) => {
   const [scroll, setScrolled] = useState('0%');
   const scrollProgress = () => {
     const scrollPx = document.documentElement.scrollTop;
@@ -19,8 +30,8 @@ const ScrollProgressBar = () => {
   }, []);
 
   return (
-    <ProgressWrapper {...{ widthSize: scroll || '0%' }}>
-      <ProgressBar {...{ widthSize: scroll }} />
+    <ProgressWrapper widthSize={scroll || '0%'} height={height}>
+      <ProgressBar widthSize={scroll || '0%'} progressBarColor={progressBarColor} height={height} />
     </ProgressWrapper>
   );
 };

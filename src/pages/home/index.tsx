@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <Wrapper>
       Hello CRA
-      <ScrollProgressBar />
+      <ScrollProgressBar height={10} />
     </Wrapper>
   );
 };

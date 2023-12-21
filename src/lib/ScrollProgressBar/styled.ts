@@ -1,10 +1,16 @@
 import styled, { css } from 'styled-components';
 
-export const ProgressWrapper = styled.div<{ widthSize: string }>`
+interface ProgressBarProps {
+  widthSize: string;
+  progressBarColor?: string;
+  height: number;
+}
+
+export const ProgressWrapper = styled.div<ProgressBarProps>`
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   width: 100vw;
-  height: 5px;
+  height: ${({ height }) => `${height}px`};
   position: fixed;
   top: 0;
   left: 0;
@@ -20,8 +26,8 @@ export const ProgressWrapper = styled.div<{ widthSize: string }>`
         `}
 `;
 
-export const ProgressBar = styled.div<{ widthSize: string }>`
-  height: 5px;
-  background: #000;
+export const ProgressBar = styled.div<ProgressBarProps>`
+  height: ${({ height }) => `${height}px`};
+  background-color: ${({ progressBarColor }) => progressBarColor};
   width: ${({ widthSize }) => widthSize || '0%'};
 `;
